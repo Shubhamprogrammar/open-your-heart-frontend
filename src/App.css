@@ -1,0 +1,86 @@
+body{
+  background-image: url("./flower.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav{
+  background-color: #E41F7B;
+}
+
+.nav-link, .btn{
+  color:white;
+  font-size: 1.3rem;
+}
+.navbar-brand{
+  color: white;
+  font-size: 1.8rem;
+}
+
+.note{
+  padding-right: 2em;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #86003C;
+}
+.note:hover{
+  color: #e63656;
+}
+
+.bs-example{
+  margin: 20px;
+  color:#86003C;
+  text-align: center;
+}
+
+.bg{
+  background-color: #E41F7B;
+  color: aliceblue;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* Notes */
+
+.custom-btn:focus, .custom-link:focus {
+  outline: none;
+  box-shadow: none;  /* Remove any shadow that may appear */
+}
+
+.custom-link {
+  text-decoration: none;  /* Optional: Remove underline from the link */
+}
+
+.custom-btn {
+  border: none;  /* Remove button border */
+}
+
+/* About */
+.about{
+  background-color: #FF8BA0;
+  padding: 2rem;
+  border-radius: 1rem;
+  line-height: 2rem;
+  font-family: sans-serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+}
+
+/* Footer */
+.page-container {
+  display: grid;
+  grid-template-rows: 1fr auto; /* This creates two rows: one for content (1fr) and one for the footer (auto) */
+  min-height: 100vh; /* Ensure the page container takes at least the full height of the screen */
+}
+
+/* Footer styling */
+footer {
+  background-color: #E41F7B; /* Example background color */
+  color: #fff; /* Text color */
+  text-align: center; /* Center the text */
+}
+
+
+/* Card Hover */
+.card:hover {
+  transform: scale(1.05); /* Slightly scales the card on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}

@@ -58,7 +58,7 @@ const LoginForm = () => {
   };
   
   return (
-    <div className="bg container mt-5 w-50 mx-auto"> {/* Adjusted width for better layout */}
+    <div className="bg container mt-5 w-100 mx-auto"> {/* Adjusted width for better layout */}
       <h2 className="text-center">Login Form</h2>
 
       {/* Display error and success messages */}

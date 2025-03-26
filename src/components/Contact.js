@@ -79,7 +79,7 @@ function Contact() {
           <p>
             For questions, comments, or more information about our initiatives, please contact us at:
             <br />
-            <i className="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mauryashubham12349@gmail.com">mauryashubham12349@gmail.com</a>
+            <i className="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mauryashubham12349@gmail.com">mauryashubham@hearts.com</a>
             <br />
             📞 <strong>Phone:</strong> +91 8850093749
           </p>
@@ -90,7 +90,7 @@ function Contact() {
           <p>
             Interested in volunteering with Open Your Hearts? We’re always looking for compassionate individuals to join our mission. Please contact our volunteer coordinator for more details:
             <br />
-            <i className="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mauryashubham12349@gmail.com">mauryashubham12349@gmail.com</a>
+            <i className="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mauryashubham12349@gmail.com">mauryashubham@hearts.com</a>
           </p>
         </div>
       </div>

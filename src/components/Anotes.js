@@ -85,31 +85,40 @@ function Anotes() {
                                                         <h6 style={{ color: '#86003C' }}>Lovely Thoughts:</h6>
                                                         <ul className="list-unstyled">
                                                             {note.comments.map((comment) => (
-                                                                <li
-                                                                    key={comment._id}
-                                                                    className="d-flex justify-content-between align-items-center"
-                                                                >
-                                                                    <div style={{ color: '#86003C' }}>
+                                                                <li key={comment._id} className="d-flex justify-content-between align-items-center">
+                                                                    {/* Comment Text */}
+                                                                    <div style={{ color: '#86003C', display: 'flex', alignItems: 'center', gap: '8px' }}>
                                                                         <strong style={{ color: '#86003C' }}>{comment.user?.name}: </strong>
                                                                         {comment.text}
                                                                     </div>
-                                                                    {/* Show delete button only for the user's own comments */}
-                                                                    {isLoggedIn &&
-                                                                        comment.user &&
-                                                                        comment.user._id === loggedInUserId && (
+
+                                                                    {/* Icons - Wrapped Inside a Flexbox */}
+                                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                                                        {isLoggedIn && comment.user && comment.user._id === loggedInUserId ? (
                                                                             <button
-                                                                                className="btn btn-link text-danger"
-                                                                                onClick={() =>
-                                                                                    deleteComment(note._id, comment._id)
-                                                                                }
+                                                                                className="btn btn-link text-danger p-0 d-flex align-items-center"
+                                                                                onClick={() => deleteComment(note._id, comment._id)}
                                                                                 style={{
                                                                                     textDecoration: 'none',
                                                                                     fontSize: '1rem',
+                                                                                    display: 'flex',
+                                                                                    alignItems: 'center',
                                                                                 }}
                                                                             >
                                                                                 <i className="far fa-trash-alt"></i>
                                                                             </button>
+                                                                        ) : (
+                                                                            <i
+                                                                                className="fas fa-heart"
+                                                                                style={{
+                                                                                    color: '#E41F7B',
+                                                                                    fontSize: '1rem',
+                                                                                    display: 'flex',
+                                                                                    alignItems: 'center',
+                                                                                }}
+                                                                            ></i>
                                                                         )}
+                                                                    </div>
                                                                 </li>
                                                             ))}
                                                         </ul>

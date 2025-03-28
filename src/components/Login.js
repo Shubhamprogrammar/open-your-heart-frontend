@@ -58,7 +58,7 @@ const LoginForm = () => {
   };
   
   return (
-    <div className="bg container mt-5 w-100 mx-auto"> {/* Adjusted width for better layout */}
+    <div className="bg container mt-5 w-100 mx-auto"> 
       <h2 className="text-center">Login Form</h2>
 
       {/* Display error and success messages */}
@@ -94,7 +94,7 @@ const LoginForm = () => {
 
         {/* Submit Button */}
         <button type="submit" className="btn btn-success w-100">Login</button>
-        <div className="mt-2 text-center" style={{ color: 'white',fontSize:'1rem' }}>Not having an account. <Link to="/signup" style={{color:'#000000'}}>Register Here</Link></div>
+        <div className="mt-2 text-center" style={{ color: 'white',fontSize:'1rem' }}>Not having an account. <Link to="/signup" style={{color:'#86003C'}}>Register Here</Link></div>
       </form>
     </div>
   );

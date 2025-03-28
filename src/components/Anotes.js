@@ -13,9 +13,8 @@ function Anotes() {
         // Fetch all hearts
         getAllHearts();
 
-        // Check if the user is logged in
         const token = localStorage.getItem('token');
-        setIsLoggedIn(!!token); // Update the logged-in state
+        setIsLoggedIn(!!token); 
         // eslint-disable-next-line
     }, []);
 
@@ -32,8 +31,13 @@ function Anotes() {
             alert('Comment cannot be empty');
             return;
         }
-        await addComment(id, commentText);
-        setComments((prevComments) => ({ ...prevComments, [id]: '' })); // Clear the comment field after submission
+        try {
+            await addComment(id, commentText);
+            setComments((prevComments) => ({ ...prevComments, [id]: '' }));
+        } catch (error) {
+            console.error("Failed to add comment:", error);
+            alert("Something went wrong. Please try again.");
+        }
     };
 
     // Function to handle comment input change for each heart
@@ -56,7 +60,7 @@ function Anotes() {
                             </div>
                         </div>
                     ) : (
-                        hearts.map((note) => (
+                        [...hearts].reverse().map((note) => (
                             <div className="col-md-4" key={note._id}>
                                 <div className="card mb-3">
                                     <div className="card-body">

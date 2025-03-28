@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import HeartContext from './HeartNoteContext'
 
 function HeartState(props) {
-    const host = 'http://localhost:5000'
+    const host = process.env.REACT_APP_API_URL;
     const heartinitial = []
     const [hearts, setHearts] = useState(heartinitial);
 

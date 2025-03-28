@@ -12,6 +12,7 @@ const SignUp = () => {
   let navigate = useNavigate();
 
   const [errors, setErrors] = useState({});
+  const API_URL = process.env.REACT_APP_API_URL;
   // const [successMessage, setSuccessMessage] = useState('');
 
   // Handle form input changes
@@ -63,7 +64,7 @@ const SignUp = () => {
     if (Object.keys(formErrors).length === 0) {
       const { name, email, mobile, password } = formData;
       try {
-        const response = await fetch('http://localhost:5000/api/auth/signup', {
+        const response = await fetch(`${API_URL}/api/auth/signup`, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ name, email, mobile, password })

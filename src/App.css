@@ -1,39 +1,85 @@
-body{
+body {
   background-image: url("./flower.jpg");
   background-position: center;
   background-attachment: fixed;
 }
 
-nav{
+nav {
   background-color: #E41F7B;
 }
 
-.nav-link, .btn{
-  color:white;
+.nav-link,
+.btn {
+  color: white;
   font-size: 1.3rem;
 }
-.navbar-brand{
+
+.navbar-brand {
   color: white;
   font-size: 1.8rem;
 }
 
-.note{
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger icon */
+.hamburger {
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(218, 210, 210);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Open state */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+
+.note {
   padding-right: 2em;
   text-decoration: none;
   font-size: 1.3rem;
   color: #86003C;
 }
-.note:hover{
+
+.note:hover {
   color: #e63656;
 }
 
-.bs-example{
+.bs-example {
   margin: 20px;
-  color:#86003C;
+  color: #86003C;
   text-align: center;
 }
 
-.bg{
+.bg {
   background-color: #f1788e;
   color: aliceblue;
   padding: 2rem;
@@ -42,45 +88,56 @@ nav{
 
 /* Notes */
 
-.custom-btn:focus, .custom-link:focus {
+.custom-btn:focus,
+.custom-link:focus {
   outline: none;
-  box-shadow: none;  /* Remove any shadow that may appear */
+  box-shadow: none;
+  /* Remove any shadow that may appear */
 }
 
 .custom-link {
-  text-decoration: none;  /* Optional: Remove underline from the link */
+  text-decoration: none;
+  /* Optional: Remove underline from the link */
 }
 
 .custom-btn {
-  border: none;  /* Remove button border */
+  border: none;
+  /* Remove button border */
 }
 
 /* About */
-.about{
+.about {
   background-color: #FF8BA0;
   padding: 2rem;
   border-radius: 1rem;
   line-height: 2rem;
-  font-family: sans-serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+  font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
 }
 
 /* Footer */
 .page-container {
   display: grid;
-  grid-template-rows: 1fr auto; /* This creates two rows: one for content (1fr) and one for the footer (auto) */
-  min-height: 100vh; /* Ensure the page container takes at least the full height of the screen */
+  grid-template-rows: 1fr auto;
+  /* This creates two rows: one for content (1fr) and one for the footer (auto) */
+  min-height: 100vh;
+  /* Ensure the page container takes at least the full height of the screen */
 }
 
 /* Footer styling */
 footer {
-  background-color: #E41F7B; /* Example background color */
-  color: #fff; /* Text color */
-  text-align: center; /* Center the text */
+  background-color: #E41F7B;
+  /* Example background color */
+  color: #fff;
+  /* Text color */
+  text-align: center;
+  /* Center the text */
 }
 
 
 /* Card Hover */
 .card:hover {
-  transform: scale(1.05); /* Slightly scales the card on hover */
-  transition: transform 0.3s ease; /* Smooth transition */
+  transform: scale(1.05);
+  /* Slightly scales the card on hover */
+  transition: transform 0.3s ease;
+  /* Smooth transition */
 }

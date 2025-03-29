@@ -44,12 +44,12 @@ function Navbar() {
           >
             ♥ Hearts ♥
           </Link>
-          <button
-            className="navbar-toggler"
-            onClick={toggleNavbar}
-            aria-label="Toggle navigation"
-          >
-            ☰
+          <button className="navbar-toggler" onClick={toggleNavbar} aria-label="Toggle navigation" style={{ border: 'none', outline: 'none', boxShadow: 'none' }}>
+            <div className={`hamburger ${isOpen ? 'open' : ''}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </button>
           <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -84,21 +84,16 @@ function Navbar() {
             </ul>
 
             <div className="d-flex">
-              {/* Check if the user is logged in */}
               {!localStorage.getItem('token') ? (
                 <>
-                  {/* Login button */}
                   <Link className="nav-link" to="/login">
                     <button className="btn btn-outline-success mx-3" type="button">Login</button>
                   </Link>
-
-                  {/* Signup button */}
                   <Link className="nav-link" to="/signup">
                     <button className="btn btn-outline-success" type="button">Signup</button>
                   </Link>
                 </>
               ) : (
-                // Logout button
                 <button className="btn btn-outline-success" onClick={handleLogOut} type="button" >
                   Logout
                 </button>

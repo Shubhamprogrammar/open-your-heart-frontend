@@ -13,7 +13,6 @@ const SignUp = () => {
 
   const [errors, setErrors] = useState({});
   const API_URL = process.env.REACT_APP_API_URL;
-  // const [successMessage, setSuccessMessage] = useState('');
 
   // Handle form input changes
   const handleChange = (e) => {
@@ -70,13 +69,20 @@ const SignUp = () => {
           body: JSON.stringify({ name, email, mobile, password })
         })
         const data = await response.json();
+        if (!response.ok) {
+          if (data.msg === "User with this email already exists") {
+            setErrors({ email: "Email already exists. Please use a different email." });
+          } else {
+            setErrors({ general: "Something went wrong. Please try again." });
+          }
+          return;
+        }
         if (data.success) {
           localStorage.setItem('token', data.authToken);
           localStorage.setItem('userId', data.userId);
           // setSuccessMessage('Sign up successful!');
           navigate('/');
         }
-        console.log('Form data:', formData);
         setFormData({
           name: '',
           email: '',

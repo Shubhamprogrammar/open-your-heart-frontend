@@ -80,7 +80,7 @@ function Hnotes() {
       </div>
 
       {/* Hearts list */}
-      <div className="container mt-4">
+      <div className="container mt-4 mt-md-0">
         <h2 className="text-center mb-4" >Your Hearts</h2>
         <div className="row">
           {hearts.length === 0 ? (

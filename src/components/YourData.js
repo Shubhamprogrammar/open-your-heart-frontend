@@ -7,7 +7,7 @@ import HeartState from '../context/heart/HeartState';
 
 const YourData = () => {
   // State to track which component should be shown
-  const [activeComponent, setActiveComponent] = useState(null);
+  const [activeComponent, setActiveComponent] = useState(2);
 
   // List of components with titles and their corresponding components
   const componentsList = [

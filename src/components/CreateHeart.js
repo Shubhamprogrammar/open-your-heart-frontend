@@ -31,7 +31,7 @@ const CreateHeart = () => {
   };
 
   return (
-    <div className="bg container mt-5">
+    <div className="bg container mt-5 mt-md-0">
       <h2 className='text-center'>🤍Shape a Heart🤍</h2>
       <form onSubmit={handleSubmit}>
         {/* Title input */}

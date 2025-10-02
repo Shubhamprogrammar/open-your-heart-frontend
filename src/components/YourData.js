@@ -59,7 +59,7 @@ const YourData = () => {
 
           <div className="col-md-9">
             {activeComponent !== null ? (
-              <div className="p-4">
+              <div>
                 {componentsList.find((item) => item.id === activeComponent).component}
               </div>
             ) : (

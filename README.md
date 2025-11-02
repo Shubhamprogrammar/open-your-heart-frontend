@@ -42,4 +42,4 @@ The platform allows people to share feelings, uplift others, and build a safe em
 **Backend Repository**
 
 GitHub (Backend):
-https://github.com/Shubhamprogrammar/Open-Your-Hearts
+https://github.com/Shubhamprogrammar/open-your-hearts-backend
